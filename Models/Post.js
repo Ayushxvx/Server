@@ -1,0 +1,22 @@
+import mongoose from 'mongoose';
+
+const PostSchema = new mongoose.Schema({
+    title:{
+        type:String,
+        required:true
+    },
+    description:{
+        type:String,
+        required:true
+    },
+    created_at:{
+        type:Date,
+        default:Date.now()
+    },
+    author:{
+        type:String,
+        required:true,
+    }
+},{timestamps:true})
+
+export default mongoose.model("Post",PostSchema);
