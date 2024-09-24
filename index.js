@@ -4,7 +4,7 @@ import router from './Routes/Post.js';
 import cors from 'cors';
 const app = express();
 app.use(cors({
-        origin: 'http://localhost:5173', // Replace with the origin of your React application      
+        origin: '*', // Replace with the origin of your React application      
         credentials: true,
       }
 ));
